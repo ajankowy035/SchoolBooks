@@ -1,0 +1,84 @@
+$colors: (
+  txt: #393e46,
+  accent: #00adb5,
+  light: #aad8d3,
+  bg: #eeeeee,
+);
+
+@function color($colorname) {
+  @return map-get($colors, $colorname);
+}
+
+$rad: 10px;
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.app__nav {
+  display: flex;
+  width: 100%;
+  background-color: color(accent);
+  color: color(txt);
+  align-items: center;
+
+  &__item {
+    text-decoration: none;
+    color: color(txt);
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &--logo {
+      color: color(bg);
+      margin-left: 1%;
+      font-family: "Shadows Into Light", cursive;
+      font-size: 1.5rem;
+    }
+
+    &--finder {
+      margin-left: 30%;
+
+      &__text {
+        border-radius: $rad;
+        width: 250px;
+        height: 30px;
+        border: none;
+      }
+
+      &__btn {
+        height: 30px;
+        background-color: color(light);
+        border-radius: $rad;
+        color: color(bg);
+        border: none;
+        margin-left: 5px;
+      }
+    }
+
+    &--about {
+      color: color(bg);
+      margin-left: 5%;
+      border: 3px solid color(accent);
+
+      &__hover {
+        border-bottom: 3px solid color(light);
+      }
+    }
+    &--epochs {
+      color: color(bg);
+      margin-left: 5%;
+
+      &__hover {
+        border-bottom: 3px solid color(light);
+      }
+    }
+    &--genres {
+      color: color(bg);
+      margin-left: 5%;
+
+      &__hover {
+        border-bottom: 3px solid color(light);
+      }
+    }
+  }
+}

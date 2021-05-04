@@ -1,0 +1,23 @@
+$colors: (
+  txt: #393e46,
+  accent: #00adb5,
+  light: #aad8d3,
+  bg: #eeeeee,
+);
+
+@function color($colorname) {
+  @return map-get($colors, $colorname);
+}
+
+$rad: 10px;
+
+html {
+  font-size: 18px;
+}
+
+body {
+  background-color: color(bg);
+  margin: 0;
+  padding: 0;
+  font-family: "Catamaran", sans-serif;
+}
