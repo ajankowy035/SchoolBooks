@@ -1,0 +1,43 @@
+.app__found {
+  margin-left: 5%;
+}
+
+.app__found__results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app__found__results__book {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #aad8d3;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.app__found__results__book__img {
+  width: 200px;
+}
+
+.app__found__results__book__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app__found__results__book__details__btn {
+  border-radius: 10px;
+  background-color: #00adb5;
+  color: #eeeeee;
+}
+/*# sourceMappingURL=Found.css.map */

@@ -8,6 +8,7 @@ import { StoreState } from '../reducers';
 //components
 import { Main } from './Main';
 import { Menu } from './Menu';
+import Found from './Found';
 
 interface AppProps {
     books: Book[];
@@ -24,6 +25,7 @@ class _App extends React.Component <AppProps> {
             <BrowserRouter>
                 <Route path='/' component={Menu} />
                 <Route path='/' exact component={Main}/>
+                <Route path='/found' exact component={Found} />
             </BrowserRouter>
         )
     }
