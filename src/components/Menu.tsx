@@ -1,5 +1,5 @@
 import React, {useState } from 'react';
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch } from "react-redux";
 
 import { Link } from 'react-router-dom';
 import { fetchBooks } from '../actions';
@@ -8,12 +8,13 @@ import './css/Menu.css';
 export const Menu = () => {
     const [search, setSearch] = useState('');
 
-    const state = useSelector(state => state)
     const dispatch = useDispatch();
 
     const searchBook = () => {
-        dispatch(fetchBooks(search))
-        console.log(state);
+        const searchArr = search.toLowerCase().split(' ');
+        const searchPhrase: string = searchArr.join('-');
+        
+        dispatch(fetchBooks(searchPhrase))
         
         
     }
@@ -25,8 +26,8 @@ export const Menu = () => {
             </div>
 
             <div className='app__nav__item app__nav__item--finder'>
-                <input className='app__nav__item--finder__text' type='text' value={search} onChange={(e) => setSearch(e.target.value)} />
-                <button className='app__nav__item--finder__btn' onClick={searchBook}>Search</button>
+                <input className='app__nav__item--finder__text' type='text' value={search} onChange={(e) => setSearch(e.target.value)} placeholder='Author full name' />
+                <Link to='/found'><button className='app__nav__item--finder__btn' onClick={searchBook}>Search</button></Link>
             </div>
 
             <Link className='app__nav__item app__nav__item--about' to='/about'>About</Link>

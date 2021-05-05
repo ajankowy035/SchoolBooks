@@ -1,0 +1,42 @@
+$colors: (
+  txt: #393e46,
+  accent: #00adb5,
+  light: #aad8d3,
+  bg: #eeeeee,
+);
+
+@function color($colorname) {
+  @return map-get($colors, $colorname);
+}
+
+$rad: 10px;
+.app__found {
+  margin-left: 5%;
+
+  &__results {
+    display: flex;
+    flex-direction: column;
+
+    &__book {
+      display: flex;
+      background-color: color(light);
+      border-radius: $rad;
+      padding: 10px;
+
+      &__img {
+        width: 200px;
+      }
+
+      &__details {
+        display: flex;
+        flex-direction: column;
+
+        &__btn {
+          border-radius: $rad;
+          background-color: color(accent);
+          color: color(bg);
+        }
+      }
+    }
+  }
+}
