@@ -17,10 +17,11 @@ const Found = (props: AppProps) => {
                 <img className='app__found__results__book__img' src={book.simple_thumb} alt='book cover' />
 
                 <div className='app__found__results__book__details' >
-                    <h3 className='app__found__results__book__details__item app_found__results__book__details__item--title'>{book.title}</h3>
-                    <h4 className='app__found__results__book__details__item app_found__results__book__details__item--author'>{book.author}</h4>
-                    <p className='app__found__results__book__details__item app_found__results__book__details__item--kind'>{book.kind}</p>
-                    <Link className='app__found__results__book__details__item app_found__results__book__details__item--btn' to='/book'><button>check book</button></Link>
+                    <h3 className='app_found__results__book__details__item--title'>{book.title}</h3>
+                    <h4 className='app_found__results__book__details__item--author'>{book.author}</h4>
+                    <p className='app_found__results__book__details__item--kind'>{book.kind}</p>
+                    <Link className='app_found__results__book__details__item--btn' to='/book'><button>check book</button></Link>
+                    <button className='app_found__results__book__details__item--add'>Add</button>
                 </div>
                 
             </div>
