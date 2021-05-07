@@ -11,7 +11,8 @@ $colors: (
 
 $rad: 10px;
 .app__found {
-  margin-left: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
 
   &__results {
     display: flex;
@@ -19,22 +20,36 @@ $rad: 10px;
 
     &__book {
       display: flex;
-      background-color: color(light);
+      background-color: lighten(color(light), 10%);
       border-radius: $rad;
-      padding: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
 
       &__img {
-        width: 200px;
+        border-radius: $rad;
+        width: 300px;
       }
 
       &__details {
+        margin-left: 40px;
         display: flex;
         flex-direction: column;
 
-        &__btn {
-          border-radius: $rad;
-          background-color: color(accent);
-          color: color(bg);
+        &__item {
+          color: color(txt);
+
+          &--btn {
+            margin-top: 100px;
+            border-radius: $rad;
+            background-color: darken(color(light), 10%);
+            color: color(bg);
+            width: 200px;
+          }
+
+          &--add {
+            background-color: color(accent);
+            width: 200px;
+          }
         }
       }
     }

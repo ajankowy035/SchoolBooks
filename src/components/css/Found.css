@@ -1,5 +1,6 @@
 .app__found {
-  margin-left: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .app__found__results {
@@ -16,16 +17,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #aad8d3;
+  background-color: #cde8e5;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .app__found__results__book__img {
-  width: 200px;
+  border-radius: 10px;
+  width: 300px;
 }
 
 .app__found__results__book__details {
+  margin-left: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,9 +39,20 @@
           flex-direction: column;
 }
 
-.app__found__results__book__details__btn {
+.app__found__results__book__details__item {
+  color: #393e46;
+}
+
+.app__found__results__book__details__item--btn {
+  margin-top: 100px;
   border-radius: 10px;
-  background-color: #00adb5;
+  background-color: #87c8c1;
   color: #eeeeee;
+  width: 200px;
+}
+
+.app__found__results__book__details__item--add {
+  background-color: #00adb5;
+  width: 200px;
 }
 /*# sourceMappingURL=Found.css.map */
